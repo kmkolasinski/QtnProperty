@@ -21,7 +21,7 @@
 #include <QVariantAnimation>
 
 QtnPropertyDelegateSlideBox::QtnPropertyDelegateSlideBox()
-    : m_boxFillColor(QColor::fromRgb(200, 200, 255)),
+    : m_boxFillColor((QPalette().highlight()).color()),
       m_liveUpdate(false),
       m_drawBorder(true),
       m_updateByScroll(true),
@@ -94,6 +94,7 @@ void QtnPropertyDelegateSlideBox::draw(QtnDrawContext& context, const QtnSubItem
     painter.restore();
 
     boxRect.adjust(context.widget->valueLeftMargin(), 0, 0, 0);
+    painter.setPen((QPalette().shadow()).color());
     qtnDrawValueText(valuePartToStr(valuePart), painter, boxRect, state(context.isActive, item.state()), nullptr);
 }
 
