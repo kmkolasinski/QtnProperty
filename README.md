@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/lexxmark/QtnProperty.svg?branch=master)](https://travis-ci.org/lexxmark/QtnProperty)
 
+
 #QtnProperty
 This is user and programmist friendly properties for Qt framework
 #Overview
