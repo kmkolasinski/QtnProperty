@@ -2,7 +2,7 @@ flex.name = Flex ${QMAKE_FILE_IN}
 flex.input = FLEX_SOURCES
 flex.output = ${QMAKE_FILE_PATH}/${QMAKE_FILE_BASE}.lexer.cpp
 
-win32:flex.commands = win_flex --wincompat -o ${QMAKE_FILE_PATH}/${QMAKE_FILE_BASE}.lexer.cpp ${QMAKE_FILE_IN}
+win32:flex.commands = $$TOP_SRC_DIR\bin-win\win_flex\win_bison --wincompat -o ${QMAKE_FILE_PATH}/${QMAKE_FILE_BASE}.lexer.cpp ${QMAKE_FILE_IN}
 unix:flex.commands = flex -o ${QMAKE_FILE_PATH}/${QMAKE_FILE_BASE}.lexer.cpp ${QMAKE_FILE_IN}
 
 flex.CONFIG += target_predeps
