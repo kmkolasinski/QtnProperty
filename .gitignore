@@ -10,3 +10,7 @@ build-*
 *.directory
 *.autosave
 *Thumbs.db
+Makefile
+.qmake.stash
+*.o
+moc_*
